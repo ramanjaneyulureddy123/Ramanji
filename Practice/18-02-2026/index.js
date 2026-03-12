@@ -47,19 +47,30 @@ setTimeout(()=>{
 },2000)  
 console.log("last")
 
+function greet(name) {
+  console.log("Hello " + name);
+}
+
+setTimeout(greet, 1500, "Rahul");
+
 // setInterval 
  let a=setInterval(()=>{
     console.log("middle")
 },2000)
 
 // clearinterval 
-setTimeout(()=>{
-clearInterval(a)
-},6000)
+// setTimeout(()=>{
+// clearInterval(a)
+// },6000)
 
 // clearTimeout 
- let timer=setTimeout(()=>{
-    console.log("ram")
-},2000)
-clearTimeout(timer)
+//  let timer=setTimeout(()=>{
+//     console.log("ram")
+// },2000)
+// clearTimeout(timer)
 
+let timer = setTimeout(() => {
+  console.log("This will not run");
+}, 5000);
+
+clearTimeout(timer);
