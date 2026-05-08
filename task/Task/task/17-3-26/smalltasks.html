@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 1: Alert Box</title>
+    <style>
+        .dark {
+  background-color: black;
+  color: white;
+}
+    </style>
+</head>
+<body>
+    <h2>Task 1: Button Click Alert</h2>
+    <button onclick="showAlert()">Click Me</button>
+        <button onclick="openWebsite()">Open Google</button>
+
+<p id="textPara">This is the original text.</p>
+
+<p id="text">Hello</p>
+<button id="btn">Click Me</button>
+
+    <button onclick="changeText()">Change Text</button>
+
+    <button id="toggleBtn">Toggle Mode</button>
+
+<h1>Welcome</h1>
+<p>This is a sample page</p>
+    <script>
+        document.getElementById("toggleBtn").addEventListener("click",function(){
+            document.body.classList.toggle("dark");
+        })
+        function showAlert() {
+            alert("Hello vijay you are clicked");
+        }
+
+
+        function openWebsite() {
+            // Opens Google in a new tab
+            window.open("https://www.google.com", "_top");
+        }
+
+
+        function changeText() {
+            // Change the paragraph text
+            document.getElementById("textPara").innerText = "The text has been changed!";
+        }
+
+        document.getElementById("btn").addEventListener("click", function() {
+  document.getElementById("text").innerText = "Hi, Welcome!";
+});
+    </script>
+</body>
+</html>

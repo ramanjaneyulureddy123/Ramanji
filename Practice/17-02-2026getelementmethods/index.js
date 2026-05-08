@@ -48,6 +48,7 @@ console.log(Math.min(10,0,20))
 console.log(Math.random())
 console.log(Math.floor(Math.random()*10)+1)
 
+
 // strings 
 let text="haiworld"
 console.log(text.length)
@@ -101,3 +102,9 @@ console.log(third.previousElementSibling )
 // console.log(newElement)
 // a1.prepend(newElement)
 // // a1.appendChild(newElement)
+
+let number=0
+   while(number!==7){
+       number=Math.floor(Math.random()*10)+1;
+       console.log(number)
+   }

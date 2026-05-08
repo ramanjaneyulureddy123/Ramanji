@@ -121,4 +121,4 @@ function palindrome(sentence){
   }
 }
 
-palindrome("madam")
+palindrome("mada")
