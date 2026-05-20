@@ -1,0 +1,68 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="taskinput" placeholder="task type">
+    <button id="addbtn">add</button>
+    <ul id="tasklist"></ul>
+    <script>
+document.getElementById("addbtn").addEventListener("click", function(){
+      let task = document.getElementById("taskInput").value;
+      let li = document.createElement("li");
+let delBtn = document.createElement("button");
+
+li.innerText = task;
+delBtn.innerText = "Delete";
+
+delBtn.onclick = function() {
+  li.remove();
+};
+
+li.appendChild(delBtn);
+document.getElementById("taskList").appendChild(li);
+})
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>List Show & Delete</title>
+</head>
+<body>
+
+<button onclick="showList()">Show List</button>
+
+<ul id="myList"></ul>
+
+<script>
+function showList() {
+  let data = [1, 2, 3];
+  let ul = document.getElementById("myList");
+
+  ul.innerHTML = ""; // clear previous list
+
+  data.forEach(function(item) {
+    let li = document.createElement("li");
+    li.innerText = item;
+
+    let delBtn = document.createElement("button");
+    delBtn.innerText = "Delete";
+
+    delBtn.onclick = function() {
+      li.remove();
+    };
+
+    li.appendChild(delBtn);
+    ul.appendChild(li);
+  });
+}
+</script>
+
+</body>
+</html>

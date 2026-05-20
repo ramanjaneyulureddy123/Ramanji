@@ -11,6 +11,7 @@
 .catch(()=>
     console.log("failure")
 )
+
 // Promise.race 
 Promise.race([
     new Promise((resolve) =>
@@ -25,14 +26,14 @@ Promise.race([
 
 let a=new Promise((resolve,reject)=>{
     setTimeout(() => {
-        resolve("task 1")
+        reject("task 1 settle")
     },1000);
 })
 
 let b=new Promise((resolve,reject)=>{
     setTimeout(() => {
         resolve("task 2")
-    },500);
+    },5000);
 })
 Promise.race([a,b])
 .then((a)=>{
@@ -97,7 +98,7 @@ console.log(N)
 console.log(O)
 console.log(P)
 
-export function hurry(x,y){
-    return x+y
-}
+// export function hurry(x,y){
+//     return x+y
+// }
 

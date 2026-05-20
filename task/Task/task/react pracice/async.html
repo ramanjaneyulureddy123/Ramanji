@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Search</title>
+</head>
+<body>
+
+  <input type="text" id="city" placeholder="Enter city (e.g. Hyderabad, Delhi)" />
+<button onclick="getWeather()">Get Weather</button>
+
+<p id="result"></p>
+
+  <script>
+async function getWeather() {
+  const cityInput = document.getElementById("city").value;
+
+  if (!cityInput) {
+    document.getElementById("result").innerText = "Please enter city name";
+    return;
+  }
+}
+  </script>
+
+</body>
+</html>

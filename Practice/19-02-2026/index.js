@@ -28,6 +28,8 @@ function action2(){
     console.log("parent element")
 }
 div1.addEventListener("click",action2,true)
+
+
 // deligation 
 let list=document.getElementById("listed")
 // console.log(div)
@@ -38,6 +40,8 @@ list.addEventListener("click",function(e){
 
 console.log(e.target)
 })
+
+
 // // normal event 
 let a=0
 let b1=document.getElementById("box")
